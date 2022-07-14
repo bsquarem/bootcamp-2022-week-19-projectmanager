@@ -75,7 +75,7 @@ model Project {
 model Todo {
   id        Int     @id @default(autoincrement())
   name      String
-  done      Boolean
+  done      Boolean @default(false)
   projectId Int
   project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
 }
